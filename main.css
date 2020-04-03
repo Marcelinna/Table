@@ -1,0 +1,121 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+    font-family:' Georgia, Times, Times New Roman, serif';
+}
+
+h1{
+    text-align: center;
+    padding: 40px 0px;
+    text-transform: uppercase;
+}
+
+.container-content {
+  max-width: 1200px;
+  width: 100%;
+  background: url("w.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+  margin: 0 auto;
+ 
+}
+
+.create-task {
+  background-color: rgb(0, 71, 153);
+  padding: 30px;
+  margin-bottom: 20px;
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 70vw;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.create-task-data {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 300px;
+}
+.create-task-data label{
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+  }
+
+  .create-task-data input {
+      height: 40px;
+      width: 400px;
+      margin-top: 10px;
+  }
+
+.day-name {
+  text-align: center;
+}
+
+.schedule {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-row-gap: 10px;
+}
+
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  
+  position: relative;
+  height: 150px;
+  width: 150px;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  background-color:white;
+  border:6px solid green;
+}
+.fillsecond {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    
+    position: relative;
+    height: 150px;
+    width: 150px;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    background-color:white;
+    border:6px solid green;
+  }
+.empty {
+  display: inline-block;
+  height: 160px;
+  width: 160px;
+  margin: 10px;
+
+  background: white;
+}
+
+.hold {
+  border: solid #ccc 4px;
+}
+
+.hovered {
+  background: yellow;
+  border-style: dashed;
+}
+
+.invisible {
+  display: none;
+}
