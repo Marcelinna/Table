@@ -11,7 +11,7 @@ body{
 }
 
 h1{
-    text-align: center;
+    
     padding: 40px 0px;
     text-transform: uppercase;
 }
@@ -24,7 +24,16 @@ h1{
   background-repeat: no-repeat;
   padding: 20px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr 2fr);
  
+}
+
+h3{
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    margin:20px;
 }
 
 .create-task {
@@ -33,9 +42,9 @@ h1{
   margin-bottom: 20px;
   
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 70vw;
-  margin: 0 auto;
+  grid-template-columns: repeat(1, 1fr);
+  width: 30vw;
+  
   margin-bottom: 50px;
 }
 .create-task-data {
@@ -44,6 +53,7 @@ h1{
   width: 300px;
 }
 .create-task-data label{
+    display: block;
     color:white;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -52,7 +62,7 @@ h1{
 
   .create-task-data input {
       height: 40px;
-      width: 400px;
+      width: 300px;
       margin-top: 10px;
   }
 
@@ -62,8 +72,20 @@ h1{
 
 .schedule {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-row-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  padding-left: 50px;
+  
+  
+}
+
+button{
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+select{
+    width: 200px;
+    height: 40px;
 }
 
 .fill {
@@ -76,8 +98,8 @@ h1{
   position: relative;
   height: 150px;
   width: 150px;
-  top: 5px;
-  left: 5px;
+  top: 15px;
+  left: 15px;
   cursor: pointer;
   background-color:white;
   border:6px solid green;
@@ -99,10 +121,11 @@ h1{
     border:6px solid green;
   }
 .empty {
-  display: inline-block;
-  height: 160px;
-  width: 160px;
-  margin: 10px;
+  
+  height: 180px;
+  width: 180px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 
   background: white;
 }
