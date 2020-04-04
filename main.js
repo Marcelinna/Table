@@ -2,75 +2,58 @@ const empties = document.querySelectorAll(".empty");
 const selectList = document.querySelectorAll(".selectList");
 const button = document.querySelector("button");
 const emptyTask = document.querySelector(".emptytask");
-const paragraf = document.getElementsByClassName("paragraf_fill");
 
-console.log(emptyTask.children, "first")
+function Select() {
+  for (const option of selectList)
+    option.addEventListener("change", function (event) {
+      const selectItem = event.target.value;
+      const diva = emptyTask.children[0];
 
-function Select(p, createdTask){
+      if (selectItem === "bardzowazne") {
+        diva.style.borderColor = "red";
+      } else if (selectItem === "wazne") {
+        diva.style.borderColor = "orange";
+      } else if (selectItem === "mniejwazne") {
+        diva.style.borderColor = "yellow";
+      } else if (selectItem === "malowazne") {
+        diva.style.borderColor = "green";
+      }
+    });
 
-for (const option of selectList)
-  option.addEventListener("change", function(event) {
-    const selectItem = event.target.value;
-   
-    console.log(emptyTask.children, "select")
-    if (selectItem === "bardzowazne") {
-        createdTask.style.borderColor = "red";
-      
-    }else if (selectItem === "wazne") {
-        createdTask.style.borderColor = "orange"
+  const input = document.querySelector(".create-task-input");
 
-    }else if (selectItem === "mniejwazne") {
-        createdTask.style.borderColor = "yellow"
+  input.addEventListener("input", addTodiv);
 
-    }else if (selectItem === "malowazne") {
-        createdTask.style.borderColor = "green"
+  const par = emptyTask.children[0].children[0];
+  console.log(par);
 
-    }
-  });
-  
-const input = document.querySelector(".create-task-input");
-
-input.addEventListener("input", addTodiv);
-
-function addTodiv(event) {
-  const value = event.target.value;
-  p.innerText = value;
-  
-}
+  function addTodiv(event) {
+    const value = event.target.value;
+    console.log(par, "functionaddTOdiv");
+    par.innerText = value;
+  }
 }
 
 const fill = document.getElementsByClassName("fill");
 
-
-button.addEventListener("click", function() {
-    console.log(emptyTask.children, "button")
+button.addEventListener("click", function () {
   const div = document.createElement("div");
   const p = document.createElement("p");
   div.className = "fill";
-  p.className ="paragraf_fill"
-
+  p.className = "paragraf_fill";
 
   div.draggable = "true";
   div.appendChild(p);
   emptyTask.appendChild(div);
 
-  const createdTask = emptyTask.children[0];
-  console.log(createdTask)
-  //createdTask.style.borderColor = "red"
-  //console.log( button.parentElement.nextElementSibling.children[0])
-  //console.log(emptyTask.children[0])
-
-  Select(p, createdTask)
+  Select();
 
   const fill = document.querySelectorAll(".fill");
 
   for (const element of fill) {
     element.addEventListener("dragstart", dragStart);
     element.addEventListener("dragend", dragEnd);
-    
   }
-
- 
 });
 
 // Loop through empty boxes and add listeners
@@ -97,7 +80,7 @@ function dragOver(e) {
 
 function dragEnter(e) {
   e.preventDefault();
-  this.className += " hovered";
+  event.target.className += " hovered";
 }
 
 function dragLeave(event) {
@@ -110,7 +93,6 @@ function dragDrop(event) {
   for (const element of fill) {
     if (element.className == "fill hold") {
       event.target.append(element);
-     console.log(emptyTask.children, "after drag")
     }
   }
 }

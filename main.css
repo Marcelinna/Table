@@ -94,7 +94,6 @@ select{
   align-items: center;
   padding: 10px;
   text-align: center;
-  
   position: relative;
   height: 150px;
   width: 150px;
@@ -129,6 +128,15 @@ select{
 
   background: white;
 }
+.emptytask {
+  
+  height: 180px;
+  width: 180px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  background: white;
+}
 
 .hold {
   border: solid #ccc 4px;
@@ -141,4 +149,12 @@ select{
 
 .invisible {
   display: none;
+}
+
+.create-task-select-important{
+    margin-top:50px;
+}
+
+.create-task-select-important select{
+    margin-bottom:20px;
 }
