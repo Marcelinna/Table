@@ -9,47 +9,99 @@
   <body>
     <main>
       <div class="container">
-
         <div class="container-content">
-          
           <div class="create-task">
             <div class="create-task-data">
-                <h3>Stwórz swoje zadania</h3>
-                <button>Dodaj zadanie</button>
-            <div>
-            <label for="create-task-input"> Wpisz swoje zadanie</label>
-              <input class="create-task-input" id="create-task-input"type="text" />
-            </div>
+              <h1>Stwórz zadanie</h1>
+              <button>Dodaj zadanie</button>
+              <div>
+                <label for="create-task-input">Tekst zadania</label>
+                <input
+                  class="create-task-input"
+                  id="create-task-input"
+                  type="text"
+                  maxlength="60"
+                  minlength="1"
+                />
+              </div>
               <div class="create-task-select-important">
-                <label for="selectList">Ważność</label>
+                <label for="selectList">Pilność i ważność</label>
 
                 <select class="selectList" id="selectList">
-                  <option value="bardzowazne">Bardzo ważne</option>
-                  <option value="wazne">ważne</option>
-                  <option value="mniejwazne">mniej ważne</option>
-                  <option value="malowazne">mało ważne</option>
+                  <option value="bardzowazne">Pilne ważne</option>
+                  <option value="wazne">Niepilne ważne</option>
+                  <option value="mniejwazne">Pilne nieważne</option>
+                  <option value="malowazne">Niepilne nieważne</option>
                 </select>
-               
+              </div>
+              <div class="legend">
+                <div class="legend_item">
+                  <div class="urgent-important"></div>
+                  <span>Pilne ważne</span>
+                </div>
+                <div class="legend_item">
+                  <div class="not-urgent-important"></div>
+                  <span>Niepilne ważne</span>
+                </div>
+                <div class="legend_item">
+                  <div class="urgent-unimportant"></div>
+                  <span>Pilne nieważne</span>
+                </div>
+                <div class="legend_item">
+                  <div class="not-urgent-unimportant"></div>
+                  <span>Niepilne nieważne</span>
+                </div>
               </div>
             </div>
-            <div class="emptytask">
-             
-             
-            </div>
-           
+            <div class="emptytask"></div>
           </div>
 
           <div class="schedule">
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            
+            <div>
+              <div class="empty"></div>
+              <button class="button-done">Zrobione</button
+              ><button class="button-remove">Usuń</button>
+            </div>
+            <div>
+              <div class="empty"></div>
+              <button class="button-done">Zrobione</button
+              ><button class="button-remove">Usuń</button>
+            </div>
+            <div>
+              <div class="empty"></div>
+              <button class="button-done">Zrobione</button
+              ><button class="button-remove">Usuń</button>
+            </div>
+            <div>
+              <div class="empty"></div>
+              <button class="button-done">Zrobione</button
+              ><button class="button-remove">Usuń</button>
+            </div>
+            <div>
+              <div class="empty"></div>
+              <button class="button-done">Zrobione</button
+              ><button class="button-remove">Usuń</button>
+            </div>
+            <div>
+              <div class="empty"></div>
+              <button class="button-done">Zrobione</button
+              ><button class="button-remove">Usuń</button>
+            </div>
+            <div>
+              <div class="empty"></div>
+              <button class="button-done">Zrobione</button
+              ><button class="button-remove">Usuń</button>
+            </div>
+            <div>
+              <div class="empty"></div>
+              <button class="button-done">Zrobione</button
+              ><button class="button-remove">Usuń</button>
+            </div>
+            <div>
+              <div class="empty"></div>
+              <button class="button-done">Zrobione</button
+              ><button class="button-remove">Usuń</button>
+            </div>
           </div>
         </div>
       </div>
