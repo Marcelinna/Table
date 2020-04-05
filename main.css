@@ -81,7 +81,7 @@ button {
   background-color: white;
   margin-bottom: 10px;
   height: 36px;
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -102,7 +102,11 @@ button:hover {
   left: 15px;
   cursor: pointer;
   background-color: white;
-  border: 6px solid green;
+  border: 8px solid green;
+}
+
+.fill p{
+  word-break: break-all;
 }
 
 .empty {
@@ -136,7 +140,7 @@ box-shadow: 0px 0px 4px 0px rgba(145,142,145,1);
   margin-bottom: 20px;
 }
 
-.selectList {
+.selectList, option {
   height: 30px;
   font-size: 15px;
 }
@@ -144,28 +148,28 @@ box-shadow: 0px 0px 4px 0px rgba(145,142,145,1);
 .urgent-important {
   width: 20px;
   height: 20px;
-  background-color: red;
+  background-color: #ff0202;
   display: inline-block;
 }
 
 .not-urgent-important {
   width: 20px;
   height: 20px;
-  background-color: orange;
+  background-color: #ffa807;
   display: inline-block;
 }
 
 .urgent-unimportant {
   width: 20px;
   height: 20px;
-  background-color: yellow;
+  background-color: #fdfd05;
   display: inline-block;
 }
 
 .not-urgent-unimportant {
   width: 20px;
   height: 20px;
-  background-color: green;
+  background-color: #028502;
   display: inline-block;
 }
 
@@ -181,7 +185,7 @@ span {
 }
 
 .done {
-  background-color: rgb(29, 153, 29);
+  background-color: rgb(56, 153, 56);
 }
 
 .button-remove,

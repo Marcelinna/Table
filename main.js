@@ -19,20 +19,21 @@ for (const button of buttonDone) {
   });
 }
 
+
 function Select() {
   for (const option of selectList)
     option.addEventListener("change", function (event) {
       const selectItem = event.target.value;
-      const diva = emptyTask.children[0];
+      const createdTask = emptyTask.children[0];
 
-      if (selectItem === "bardzowazne") {
-        diva.style.borderColor = "red";
-      } else if (selectItem === "wazne") {
-        diva.style.borderColor = "orange";
-      } else if (selectItem === "mniejwazne") {
-        diva.style.borderColor = "yellow";
-      } else if (selectItem === "malowazne") {
-        diva.style.borderColor = "green";
+      if (selectItem === "urgent-important") {
+        createdTask.style.borderColor = "#ff0202";
+      } else if (selectItem === "not-urgent-important") {
+        createdTask.style.borderColor = "#ffa807";
+      } else if (selectItem === "urgent-unimportant") {
+        createdTask.style.borderColor = "#fdfd05";
+      } else if (selectItem === "not-urgent-unimportant") {
+        createdTask.style.borderColor = "#028502";
       }
     });
 
@@ -49,12 +50,15 @@ const fill = document.getElementsByClassName("fill");
 
 button.addEventListener("click", function () {
   button.disabled = true;
+
+  //create task div and paragraf
   const div = document.createElement("div");
   const p = document.createElement("p");
   div.className = "fill";
   p.className = "paragraf_fill";
-
   div.draggable = "true";
+
+  // append element to DOM
   div.appendChild(p);
   emptyTask.appendChild(div);
 
@@ -62,18 +66,15 @@ button.addEventListener("click", function () {
 
   const fill = document.querySelectorAll(".fill");
 
-  // if (fill.length > 2){
-  //   alert("hahah")
-
-  // }
-
+  // add eventListener to created task div
   for (const element of fill) {
     element.addEventListener("dragstart", dragStart);
     element.addEventListener("dragend", dragEnd);
   }
 });
 
-// Loop through empty boxes and add listeners
+// Add eventListener to empty box
+
 for (const empty of empties) {
   empty.addEventListener("dragover", dragOver);
   empty.addEventListener("dragenter", dragEnter);
@@ -81,7 +82,7 @@ for (const empty of empties) {
   empty.addEventListener("drop", dragDrop);
 }
 
-// Drag Functions
+// Drag 
 
 function dragStart(event) {
   event.target.className += " hold";
@@ -91,23 +92,25 @@ function dragEnd(event) {
   event.target.className = "fill";
 }
 
-function dragOver(e) {
-  e.preventDefault();
-  e.stopImmediatePropagation();
+function dragOver(event) {
+  event.preventDefault();
+  event.stopImmediatePropagation();
 
   if (event.target.childNodes.length > 0) {
     event.target.style.pointerEvents = "none";
   }
 }
 
-function dragEnter(e) {
-  e.preventDefault();
+function dragEnter(event) {
+  event.preventDefault();
 }
 
-function dragLeave(e) {
-  setTimeout(Levave, 1000);
+function dragLeave(event) {
+  setTimeout(Leave, 1000);
 
-  function Levave() {
+  event.target.style.backgroundColor = "white";
+
+  function Leave() {
     for (const element of fill) {
       element.style.pointerEvents = "auto";
     }
