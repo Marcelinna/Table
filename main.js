@@ -16,14 +16,18 @@ for (const button of buttonRemove) {
     button.parentElement.firstElementChild.firstElementChild.remove();
     button.parentElement.firstElementChild.className = "empty";
 
-    StorageSetItem()
+    StorageSetItem();
   });
 }
 
 // Change task to done
 for (const button of buttonDone) {
   button.addEventListener("click", function () {
-    button.parentElement.firstElementChild.classList.toggle("done");
+    button.parentElement.firstElementChild.firstElementChild.classList.toggle(
+      "done"
+    );
+
+    StorageSetItem();
   });
 }
 
@@ -53,12 +57,12 @@ function Select() {
 function addTodiv(event) {
   const par = emptyTask.children[0].children[0];
   const value = event.target.value;
-  par.innerText = value;
+  par.innerText = value.toUpperCase();
 }
 
 const fill = document.getElementsByClassName("fill");
 
-// create task 
+// create task
 
 button.addEventListener("click", function () {
   button.disabled = true;
@@ -107,7 +111,7 @@ function dragEnd(event) {
 
 function dragOver(event) {
   event.preventDefault();
-  event.stopImmediatePropagation();
+  //event.target.style.pointerEvents = "auto";
 
   if (event.target.childNodes.length > 0) {
     event.target.style.pointerEvents = "none";
@@ -130,6 +134,7 @@ function dragLeave(event) {
 
 function dragDrop(event) {
   event.target.className = "empty";
+  console.log(event.target.style.pointerEvents, "drag");
 
   input.value = "";
 
@@ -138,25 +143,27 @@ function dragDrop(event) {
   }
 
   for (const element of fill) {
-    if (element.className === "fill hold") {
+    if (
+      element.className === "fill hold" ||
+      element.className === "fill done hold"
+    ) {
       const id = event.target.id;
       element.setAttribute("id", id);
       event.target.append(element);
+
       element.className = "fill";
-      console.log(element.id);
 
       element.style.pointerEvents = "auto";
     } else {
       element.style.pointerEvents = "auto";
     }
-
-    for (const empty of empties) {
-      empty.style.pointerEvents = "auto";
-    }
   }
 
-  StorageSetItem()
+  for (const empty of empties) {
+    empty.style.pointerEvents = "auto";
+  }
 
+  StorageSetItem();
 }
 
 // function for get item from Storage
@@ -172,21 +179,18 @@ function StorageGetItem() {
     for (const element of a) {
       if (empty.id === element.id) {
         empty.append(element);
+        element.addEventListener("dragstart", dragStart);
+        element.addEventListener("dragend", dragEnd);
       }
     }
   }
 }
 
 // function for set item in Storage
-function StorageSetItem(){
-
+function StorageSetItem() {
   const drophistory = [];
   for (const empty of empties) {
-    console.log([...fill].find((element) => element.id === empty.id));
-
     let StorageElement = [...fill].find((element) => element.id === empty.id);
-
-    console.log(StorageElement, "storageElement");
 
     if (StorageElement !== undefined) {
       drophistory.push(StorageElement.outerHTML);
@@ -194,6 +198,4 @@ function StorageSetItem(){
   }
 
   localStorage.setItem("obj", JSON.stringify(drophistory));
-  console.log(localStorage, "local");
-
 }

@@ -39,9 +39,9 @@ h1 {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  -webkit-box-shadow: 0px 0px 4px 0px rgba(145,142,145,1);
-  -moz-box-shadow: 0px 0px 4px 0px rgba(145,142,145,1);
-  box-shadow: 0px 0px 4px 0px rgba(145,142,145,1);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(145, 142, 145, 1);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(145, 142, 145, 1);
+  box-shadow: 0px 0px 4px 0px rgba(145, 142, 145, 1);
 }
 
 .create-task-data {
@@ -63,7 +63,6 @@ h1 {
   width: 300px;
   margin-top: 6px;
   font-size: 14px;
-  
 }
 
 select {
@@ -103,10 +102,10 @@ button:hover {
   left: 15px;
   cursor: pointer;
   background-color: white;
-  border: 8px solid green;
+  border: 8px solid #ff0202;
 }
 
-.fill p{
+.fill p {
   word-break: break-all;
 }
 
@@ -116,10 +115,9 @@ button:hover {
   margin-right: 10px;
   margin-bottom: 10px;
   background: white;
-  -webkit-box-shadow: 0px 0px 4px 0px rgba(145,142,145,1);
--moz-box-shadow: 0px 0px 4px 0px rgba(145,142,145,1);
-box-shadow: 0px 0px 4px 0px rgba(145,142,145,1);
-  
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(145, 142, 145, 1);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(145, 142, 145, 1);
+  box-shadow: 0px 0px 4px 0px rgba(145, 142, 145, 1);
 }
 .emptytask {
   height: 180px;
@@ -128,9 +126,9 @@ box-shadow: 0px 0px 4px 0px rgba(145,142,145,1);
   background: white;
   margin: 0 auto;
   margin-top: 25px;
-  -webkit-box-shadow: 0px 0px 4px 0px rgba(145,142,145,1);
--moz-box-shadow: 0px 0px 4px 0px rgba(145,142,145,1);
-box-shadow: 0px 0px 4px 0px rgba(145,142,145,1);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(145, 142, 145, 1);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(145, 142, 145, 1);
+  box-shadow: 0px 0px 4px 0px rgba(145, 142, 145, 1);
 }
 
 .create-task-select-important {
@@ -141,7 +139,8 @@ box-shadow: 0px 0px 4px 0px rgba(145,142,145,1);
   margin-bottom: 20px;
 }
 
-.selectList, option {
+.selectList,
+option {
   height: 30px;
   font-size: 15px;
 }
@@ -163,7 +162,7 @@ box-shadow: 0px 0px 4px 0px rgba(145,142,145,1);
 .urgent-unimportant {
   width: 20px;
   height: 20px;
-  background-color: #fdfd05;
+  background-color: #ffff00;
   display: inline-block;
 }
 
@@ -186,7 +185,7 @@ span {
 }
 
 .done {
-  background-color: rgb(56, 153, 56);
+  background-color: rgba(255, 252, 101, 0.6);
 }
 
 .button-remove,
@@ -197,13 +196,10 @@ span {
   font-size: 11px;
   background-color: white;
   letter-spacing: 1px;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(145,142,145,1);
--moz-box-shadow: 0px 0px 5px 0px rgba(145,142,145,1);
-box-shadow: 0px 0px 5px 0px rgba(145,142,145,1);
-  
- 
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(145, 142, 145, 1);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(145, 142, 145, 1);
+  box-shadow: 0px 0px 5px 0px rgba(145, 142, 145, 1);
 }
 .button-remove {
   margin-left: 20px;
 }
-
