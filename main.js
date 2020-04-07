@@ -8,6 +8,7 @@ const buttonRemove = document.querySelectorAll(".button-remove");
 
 window.onload = function () {
   StorageGetItem();
+  document.getElementById('selectList')[0].selected='selected';
 };
 
 // Remove Task Button
