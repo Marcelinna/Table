@@ -39,7 +39,6 @@ h1 {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  
 }
 
 .create-task-data {
@@ -102,7 +101,7 @@ button:hover {
   left: 15px;
   cursor: pointer;
   background-color: white;
-  border: 8px solid  #f53232;
+  border: 6px solid #f53232;
   border-radius: 20px;
 }
 
@@ -192,7 +191,7 @@ span {
 }
 
 .done {
-  background-color: rgba(255, 252, 101, 0.6); 
+  background-color: rgba(255, 252, 101, 0.6);
 }
 
 .button-remove,
@@ -209,4 +208,245 @@ span {
 }
 .button-remove {
   margin-left: 20px;
+}
+
+@media (max-width: 1120px) {
+  .container-content {
+    padding: 20px 5px 20px 5px;
+  }
+
+  .create-task {
+    padding: 30px 30px 30px 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container-content {
+    padding: 20px 1px 20px 1px;
+  }
+
+  .create-task {
+    padding: 30px 15px 30px 15px;
+  }
+}
+
+@media (max-width: 970px) {
+  button {
+    grid-area: button;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .legend {
+    grid-area: legend;
+    margin-top: 10px;
+    padding-left: 85px;
+    margin-left: 50px;
+  }
+
+  .create-task-select-important {
+    grid-area: select;
+    padding-left: 85px;
+    margin-left: 50px;
+  }
+
+  h1 {
+    grid-area: header;
+  }
+
+  .input {
+    grid-area: input;
+    padding-left: 85px;
+    margin-left: 50px;
+    margin-bottom: 5px;
+  }
+  .container-content {
+    grid-template-columns: auto;
+  }
+  .create-task {
+    height: 550px;
+    margin-bottom: 30px;
+  }
+
+  .create-task-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-areas:
+      "header header"
+      "button button"
+      "input ."
+      "legend ."
+      "select .";
+  }
+  .create-task-data input {
+    height: 40px;
+    width: 250px;
+    margin-right: 100px;
+  }
+
+  .emptytask {
+    position: relative;
+    left: 150px;
+    bottom: 250px;
+  }
+  .schedule {
+    grid-gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 850px) {
+  .legend {
+    padding-left: 65px;
+    margin-left: 50px;
+  }
+
+  .create-task-select-important {
+    padding-left: 65px;
+    margin-left: 50px;
+  }
+
+  .input {
+    padding-left: 65px;
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 750px) {
+  .legend {
+    padding-left: 25px;
+  }
+
+  .create-task-select-important {
+    padding-left: 25px;
+  }
+
+  .input {
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 625px) {
+  .schedule {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    justify-content: end;
+  }
+  .legend {
+    padding-left: 10px;
+  }
+
+  .create-task-select-important {
+    padding-left: 10px;
+  }
+
+  .input {
+    padding-left: 10px;
+  }
+  .create-task-data input {
+    width: 200px;
+  }
+  .button-remove,
+  .button-done {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 510px) {
+  .schedule {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    justify-content: end;
+  }
+
+  .emptytask {
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
+
+  .legend {
+    padding-left: 0px;
+    margin-left: 75px;
+  }
+
+  .create-task-select-important {
+    padding-left: 0px;
+    margin-left: 0 auto;
+  }
+  .create-task-select-important label {
+    margin-left: 15px;
+  }
+
+  .input {
+    padding-left: 0px;
+  }
+  .input label {
+    margin-left: 35px;
+  }
+  .create-task-data input {
+    width: 200px;
+    padding-left: 0px;
+  }
+  .create-task {
+    height: auto;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .create-task-data {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .create-task-data input {
+    width: 80%;
+  }
+}
+
+@media (max-width: 430px) {
+  .schedule {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5px;
+    justify-content: center;
+  }
+  .create-task-data input {
+    margin-right: 70px;
+  }
+}
+@media (max-width: 430px) {
+  .create-task-data input {
+    width: 100%;
+    margin-right: 30px;
+  }
+  .input {
+    margin-left: 0;
+  }
+  .create-task-select-important {
+    width: 100%;
+    margin-left: 0%;
+  }
+  .legend {
+    margin-left: 0;
+  }
+  .create-task {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 320px) {
+  .create-task {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
