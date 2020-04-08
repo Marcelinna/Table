@@ -41,13 +41,13 @@ function Select() {
       const createdTask = emptyTask.children[0];
 
       if (selectItem === "urgent-important") {
-        createdTask.style.borderColor = "#ff0202";
+        createdTask.style.borderColor = "#f53232";
       } else if (selectItem === "not-urgent-important") {
-        createdTask.style.borderColor = "#ffa807";
+        createdTask.style.borderColor = "#f7b231";
       } else if (selectItem === "urgent-unimportant") {
-        createdTask.style.borderColor = "#fdfd05";
+        createdTask.style.borderColor = "#ffff2c";
       } else if (selectItem === "not-urgent-unimportant") {
-        createdTask.style.borderColor = "#028502";
+        createdTask.style.borderColor = "#19a019";
       }
     });
 
