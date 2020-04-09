@@ -24,7 +24,7 @@ h1 {
   max-width: 1200px;
   width: 100%;
   size: cover;
-  background-color: #cff1ef;
+  background-color: #dff1f1;
   padding: 20px 20px 40px 20px;
   margin: 0 auto;
   display: grid;
@@ -66,6 +66,7 @@ select {
   width: 200px;
   height: 40px;
   margin-top: 6px;
+  margin-bottom: 20px;
 }
 .schedule {
   display: grid;
@@ -106,7 +107,7 @@ button:hover {
 }
 
 .fill p {
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .empty {
@@ -135,10 +136,6 @@ button:hover {
 
 .create-task-select-important {
   margin-top: 16px;
-}
-
-.create-task-select-important select {
-  margin-bottom: 20px;
 }
 
 .selectList,
@@ -372,29 +369,39 @@ span {
 
   .legend {
     padding-left: 0px;
-    margin-left: 75px;
+    margin-left: 0px;
   }
 
   .create-task-select-important {
     padding-left: 0px;
-    margin-left: 0 auto;
+    margin-left: 0;
   }
   .create-task-select-important label {
-    margin-left: 15px;
+    text-align: center;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  .input label {
+    text-align: center;
   }
 
   .input {
+    margin-left: 0px;
     padding-left: 0px;
-  }
-  .input label {
-    margin-left: 35px;
   }
   .create-task-data input {
-    width: 200px;
+    width: 100%;
     padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
   }
+
   .create-task {
     height: auto;
+    width: 95vw;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -406,10 +413,7 @@ span {
     justify-content: center;
     display: flex;
     flex-direction: column;
-  }
-
-  .create-task-data input {
-    width: 80%;
+    width: 90%;
   }
 }
 
@@ -418,35 +422,5 @@ span {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 5px;
     justify-content: center;
-  }
-  .create-task-data input {
-    margin-right: 70px;
-  }
-}
-@media (max-width: 430px) {
-  .create-task-data input {
-    width: 100%;
-    margin-right: 30px;
-  }
-  .input {
-    margin-left: 0;
-  }
-  .create-task-select-important {
-    width: 100%;
-    margin-left: 0%;
-  }
-  .legend {
-    margin-left: 0;
-  }
-  .create-task {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-
-@media (max-width: 320px) {
-  .create-task {
-    padding-left: 30px;
-    padding-right: 30px;
   }
 }
