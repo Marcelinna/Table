@@ -8,7 +8,7 @@ const buttonRemove = document.querySelectorAll(".button-remove");
 
 window.onload = function () {
   StorageGetItem();
-  document.getElementById('selectList')[0].selected='selected';
+  document.getElementById("selectList")[0].selected = "selected";
 };
 
 // Remove Task Button
@@ -24,9 +24,7 @@ for (const button of buttonRemove) {
 // Change task to done
 for (const button of buttonDone) {
   button.addEventListener("click", function () {
-    button.parentElement.firstElementChild.firstElementChild.classList.toggle(
-      "done"
-    );
+    button.classList.toggle("done");
 
     StorageSetItem();
   });
@@ -71,6 +69,7 @@ button.addEventListener("click", function () {
   //create div and paragraf
   const div = document.createElement("div");
   const p = document.createElement("p");
+
   div.className = "fill";
   p.className = "paragraf_fill";
   div.draggable = "true";

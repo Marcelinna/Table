@@ -15,7 +15,6 @@ body {
   background: url("person.jpg"),
     linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
   background-blend-mode: overlay;
-
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
@@ -26,16 +25,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.header-img {
-  font-size: 37px;
+  font-size: 35px;
   color: black;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-family: "IM Fell French Canon SC", serif;
   word-break: break-word;
-
 }
 
 h1 {
@@ -135,6 +130,7 @@ button:hover {
 
 .fill p {
   word-break: break-word;
+  color: black;
 }
 
 .empty {
@@ -201,7 +197,7 @@ option {
   border-radius: 10px;
 }
 
-span {
+.legend_item-header {
   color: white;
   margin-left: 10px;
   position: absolute;
@@ -213,7 +209,13 @@ span {
 }
 
 .done {
-  background-color: rgba(255, 252, 101, 0.6);
+  font-weight: bold;
+}
+
+.done::first-letter {
+  color: red;
+  text-decoration: underline;
+  text-decoration-color: black;
 }
 
 .button-remove,
@@ -351,8 +353,6 @@ span {
   }
   .header-img {
     font-size: 33px;
-    
-  
   }
 }
 
@@ -383,8 +383,6 @@ span {
   }
   .header-img {
     font-size: 28px;
-    
-  
   }
 }
 
@@ -455,8 +453,6 @@ span {
     padding: 30px;
     line-height: 30px;
     height: 60vh;
-    
-  
   }
 }
 
