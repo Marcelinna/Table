@@ -376,7 +376,7 @@ option {
     margin-bottom: 10px;
   }
   .header-img {
-    font-size: 28px;
+    font-size: 29px;
   }
 }
 
@@ -443,9 +443,9 @@ option {
     width: 90%;
   }
   .header-img {
-    font-size: 22px;
+    font-size: 26px;
     padding: 30px;
-    line-height: 30px;
+    line-height: 35px;
     height: 60vh;
   }
 }
