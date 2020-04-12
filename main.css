@@ -209,13 +209,7 @@ option {
 }
 
 .done {
-  font-weight: bold;
-}
-
-.done::first-letter {
-  color: red;
-  text-decoration: underline;
-  text-decoration-color: black;
+  text-decoration: line-through;
 }
 
 .button-remove,

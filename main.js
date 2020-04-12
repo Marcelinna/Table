@@ -24,7 +24,9 @@ for (const button of buttonRemove) {
 // Change task to done
 for (const button of buttonDone) {
   button.addEventListener("click", function () {
-    button.classList.toggle("done");
+    button.parentElement.firstElementChild.firstElementChild.firstElementChild.classList.toggle(
+      "done"
+    );
 
     StorageSetItem();
   });
