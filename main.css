@@ -106,6 +106,7 @@ button {
   text-transform: uppercase;
   border-radius: 7px;
   border: 1px solid white;
+  outline: none;
 }
 button:hover {
   cursor: pointer;
@@ -223,6 +224,7 @@ option {
   -webkit-box-shadow: 0px 0px 5px 0px rgba(145, 142, 145, 1);
   -moz-box-shadow: 0px 0px 5px 0px rgba(145, 142, 145, 1);
   box-shadow: 0px 0px 5px 0px rgba(145, 142, 145, 1);
+  outline:none
 }
 .button-remove {
   margin-left: 20px;
