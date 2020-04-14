@@ -136,7 +136,6 @@ function dragLeave(event) {
 
 function dragDrop(event) {
   event.target.className = "empty";
-  console.log(event.target.style.pointerEvents, "drag");
 
   input.value = "";
 
