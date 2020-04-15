@@ -9,6 +9,7 @@ const buttonRemove = document.querySelectorAll(".button-remove");
 window.onload = function () {
   StorageGetItem();
   document.getElementById("selectList")[0].selected = "selected";
+  input.value = "";
 };
 
 // Remove Task Button
@@ -90,6 +91,8 @@ button.addEventListener("click", function () {
     element.addEventListener("dragstart", dragStart);
     element.addEventListener("dragend", dragEnd);
   }
+
+  input.removeAttribute("readonly");
 });
 
 // Add drag event to empty box
@@ -136,7 +139,7 @@ function dragLeave(event) {
 
 function dragDrop(event) {
   event.target.className = "empty";
-
+  input.readOnly = "true";
   input.value = "";
 
   if (fill.length <= 8) {
