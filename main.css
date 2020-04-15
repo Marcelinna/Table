@@ -261,8 +261,6 @@ option {
 }
 
 @media (max-width: 970px) {
-  
-
   button {
     grid-area: button;
     width: 80%;
@@ -297,22 +295,25 @@ option {
     grid-template-columns: auto;
   }
   .create-task {
-    height: auto;
+    height: 590px;
     margin-bottom: 30px;
+    width: 98vw;
+  }
+
+  .create-task h3 {
+    position: relative;
+    top: -150px;
   }
 
   .create-task-data {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
     grid-template-areas:
       /* "header header" */
       "button button"
       "input ."
       "legend ."
-      "select ."
-      
-    
+      "select .";
   }
   .create-task-data input {
     height: 40px;
@@ -450,6 +451,12 @@ option {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .create-task h3 {
+    position: relative;
+    top: 0px;
+    margin-top: 10px;
   }
 
   .create-task-data {
