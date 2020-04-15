@@ -157,6 +157,16 @@ button:hover {
   border-radius: 5px;
 }
 
+.create-task h3{
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 6px;
+  text-align: center;
+  line-height: 20px;
+}
+
 .create-task-select-important {
   margin-top: 16px;
 }
