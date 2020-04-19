@@ -1,0 +1,481 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: " Georgia, Times, Times New Roman, serif";
+  font-size: 15px;
+  background: url("img/email-pattern.png");
+  background-color: #786fa6;
+  background-blend-mode: overlay;
+}
+
+.header-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: "IM Fell French Canon SC", serif;
+  white-space: nowrap;
+  -ms-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.container-content {
+  max-width: 1200px;
+  padding: 40px 20px 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 1% auto auto;
+}
+
+.create-task {
+  background-color: #2d2f2e;
+  border-radius: 10px;
+  padding: 30px 65px 30px 65px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.create-task-data {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 15px;
+}
+.create-task-data label {
+  display: block;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.create-task-data label i {
+  font-size: 14px;
+  color: #b5abe6;
+}
+
+.create-task-data input {
+  height: 40px;
+  width: 300px;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+select {
+  width: 200px;
+  height: 40px;
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+.schedule {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  justify-content: end;
+}
+
+button {
+  background-color: white;
+  margin-bottom: 10px;
+  height: 36px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 7px;
+  border: 1px solid white;
+  outline: none;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  height: 140px;
+  width: 150px;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  background-color: white;
+  border: 3px solid #f53232;
+  border-radius: 20px;
+}
+
+.fill p {
+  word-break: break-word;
+  color: black;
+}
+
+.empty {
+  height: 150px;
+  width: 160px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: white;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(145, 142, 145, 1);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(145, 142, 145, 1);
+  box-shadow: 0px 0px 4px 0px rgba(145, 142, 145, 1);
+  border-radius: 5px;
+}
+.emptytask {
+  height: 150px;
+  width: 160px;
+  margin-top: 15px;
+  background: white;
+  margin: 0 auto;
+  margin-top: 25px;
+  border-radius: 5px;
+}
+
+.create-task h3 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 6px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.create-task h3 i {
+  font-size: 20px;
+  color: #b5abe6;
+  position: relative;
+  top: 2px;
+}
+
+.create-task-select-important {
+  margin-top: 16px;
+}
+
+.selectList,
+option {
+  height: 30px;
+  font-size: 15px;
+}
+
+.urgent-important {
+  width: 20px;
+  height: 20px;
+  background-color: #f53232;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.not-urgent-important {
+  width: 20px;
+  height: 20px;
+  background-color: #f3b43e;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.urgent-unimportant {
+  width: 20px;
+  height: 20px;
+  background-color: #ffff2c;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.not-urgent-unimportant {
+  width: 20px;
+  height: 20px;
+  background-color: #19a019;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.legend_item-header {
+  color: white;
+  margin-left: 10px;
+  position: absolute;
+}
+
+.legend_item {
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.button-remove,
+.button-done {
+  width: 73px;
+  height: 28px;
+  text-transform: uppercase;
+  font-size: 11px;
+  background-color: white;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(145, 142, 145, 1);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(145, 142, 145, 1);
+  box-shadow: 0px 0px 5px 0px rgba(145, 142, 145, 1);
+  outline: none;
+}
+.button-remove {
+  margin-left: 13px;
+}
+
+@media (max-width: 1120px) {
+  .container-content {
+    padding: 20px 5px 20px 5px;
+  }
+
+  .create-task {
+    padding: 30px 30px 30px 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container-content {
+    padding: 20px 1px 20px 1px;
+  }
+
+  .create-task {
+    padding: 30px 15px 30px 15px;
+  }
+}
+
+@media (max-width: 970px) {
+  .header-img {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    height: 30vh;
+    word-break: break-word;
+    padding: 10px;
+    white-space: pre-wrap;
+  }
+
+  button {
+    grid-area: button;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .legend {
+    grid-area: legend;
+    margin-top: 10px;
+    padding-left: 85px;
+    margin-left: 50px;
+  }
+
+  .create-task-select-important {
+    grid-area: select;
+    padding-left: 85px;
+    margin-left: 50px;
+  }
+
+  .input {
+    grid-area: input;
+    padding-left: 85px;
+    margin-left: 50px;
+    margin-bottom: 5px;
+  }
+  .container-content {
+    grid-template-columns: auto;
+  }
+  .create-task {
+    height: 590px;
+    margin-bottom: 30px;
+    width: 100vw;
+    border-radius: 0%;
+  }
+
+  .create-task h3 {
+    position: relative;
+    top: -150px;
+  }
+
+  .create-task-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "button button"
+      "input ."
+      "legend ."
+      "select .";
+  }
+  .create-task-data input {
+    height: 40px;
+    width: 250px;
+    margin-right: 100px;
+  }
+
+  .emptytask {
+    position: relative;
+    left: 150px;
+    bottom: 250px;
+  }
+  .schedule {
+    grid-gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 850px) {
+  .legend {
+    padding-left: 65px;
+    margin-left: 50px;
+  }
+
+  .create-task-select-important {
+    padding-left: 65px;
+    margin-left: 50px;
+  }
+
+  .input {
+    padding-left: 65px;
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 750px) {
+  .legend {
+    padding-left: 25px;
+  }
+
+  .create-task-select-important {
+    padding-left: 25px;
+  }
+
+  .input {
+    padding-left: 25px;
+  }
+  .header-img {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 625px) {
+  .schedule {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    justify-content: end;
+  }
+  .legend {
+    padding-left: 10px;
+  }
+
+  .create-task-select-important {
+    padding-left: 10px;
+  }
+
+  .input {
+    padding-left: 10px;
+  }
+  .create-task-data input {
+    width: 200px;
+  }
+  .button-remove,
+  .button-done {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 510px) {
+  .schedule {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    justify-content: end;
+  }
+
+  .emptytask {
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
+
+  .legend {
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+
+  .create-task-select-important {
+    padding-left: 0px;
+    margin-left: 0;
+  }
+  .create-task-select-important label {
+    text-align: center;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  .input label {
+    text-align: center;
+  }
+
+  .input {
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+  .create-task-data input {
+    width: 100%;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .create-task {
+    height: auto;
+    width: 95vw;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .create-task h3 {
+    position: relative;
+    top: 0px;
+    margin-top: 10px;
+  }
+
+  .create-task-data {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  .header-img {
+    padding: 30px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 430px) {
+  .schedule {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5px;
+    justify-content: center;
+  }
+}
