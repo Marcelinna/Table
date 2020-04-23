@@ -9,8 +9,9 @@
 body {
   font-family: " Georgia, Times, Times New Roman, serif";
   font-size: 15px;
-  background: url("img/email-pattern.png");
-  background-color: #786fa6;
+
+  background: url("img/email-pattern.png") #786fa6;
+
   background-blend-mode: overlay;
 }
 
@@ -116,8 +117,7 @@ button:hover {
   left: 5px;
   cursor: pointer;
   background-color: white;
-  border: 3px solid #f53232;
-  border-radius: 20px;
+  border-top: 5px solid #f53232;
 }
 
 .fill p {
