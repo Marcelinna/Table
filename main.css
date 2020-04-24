@@ -446,7 +446,6 @@ option {
 
   .create-task {
     height: auto;
-    width: 95vw;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
